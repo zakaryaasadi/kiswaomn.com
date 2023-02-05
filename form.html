@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+  	<title>كسوة - تقديم طلب</title>
+    <meta charset="utf-8">
+	<link href="assets/img/favicon.png" rel="icon">
+	<meta content="كسوة الإمارات لإعادة تدوير الملابس" name="description">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.rtl.min.css">
+
+	<link rel="stylesheet" href="assets/css/form.css">
+	</head>
+	<body class="text-right">
+	<section id="create-order" class="mb-5">
+		<div class="container">
+			<div class="row justify-content-center p-3">
+				<div class="col-md-12 text-center mb-5 bg-primary">
+					<div class="row mb-4">
+						<div class="col-md-6">
+							<img src="assets/img/logo.png" class="img-fluid">
+						</div>
+						<div class="col-md-6">
+							<img src="assets/img/hh.png" style="max-height: 200px;" class="img-fluid">
+						</div>
+					</div>
+					<h5 class="text-white">تبرع بملابسك المستعملة لصالح أهلنا في اليمن وحمايتهم من البرد القارص.</h5>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12">
+					<div class="wrapper">
+						<div class="row no-gutters">
+							<div class="col-lg-8 col-md-7 order-md-last d-flex align-items-stretch">
+								<div class="contact-wrap w-100 p-md-5 p-4">
+									<h3 class="mb-4">قدم طلبك الآن</h3>
+									<form class="contactForm">
+										<div class="row">
+											<div class="col-md-6 form-group">
+											  <label>اسمك بالكامل</label>
+											  <input type="text" name="name" class="form-control" id="name" placeholder="اسمك" required>
+											  <small id="name_empty" class="err-info form-text text-danger">رجاء قم بإدخال الاسم</small>
+											</div>
+											<div class="col-md-6 form-group mt-3 mt-md-0">
+											  <label>رقم الهاتف</label>
+											  <input type="text" class="form-control" name="phone" id="phone" placeholder="7XXXXXXXX" required>
+											  <small id="phone_empty" class="err-info form-text text-danger">رجاء قم بإدخال رقم الهاتف</small>
+											  <small id="phone_incorrect" class="err-info form-text text-danger">رجاء قم بإدخال رقم الهاتف بشكل صحيح</small>
+											</div>
+										  </div>
+										  <div class="row">
+											<div class="col-md-12 form-group mt-3 mt-md-0">
+											  <label>العنوان</label>
+											  <input type="text" class="form-control" name="address" id="address" placeholder="المحافظة ، اسم الولاية أو القرية ، اسم الشارع ، أقرب معلم ، اسم البناء ، رقم المنزل" required>
+											  <small id="address_empty" class="err-info form-text text-danger">رجاء قم بإدخال العنوان</small>
+											</div>
+										  </div>
+										  <div class="my-3">
+											<div class="loading"> جاري المعالجة  </div>
+											<div class="dup-message">لديك طلب سابق قيد المعالجة سوف يتم التواصل معكم بتاريخ <strong id="date"></strong></div>
+											<div class="error-message">حدث خطأ أثناء رفع الطلب يمكن التواصل معنا عن طريق الهاتف</div>
+											<div class="sent-message">تم إرسال طلبك بنجاح سوف يتم التواصل معكم خلال يومين عمل. شكراً لك!</div>
+										  </div>
+										  <button id="send" type="button" class="btn btn-primary">إرسال الطلب</button>
+									</form>
+
+									<p>قال رسول الله صلى الله عليه وسلم "المسلم أخو المسلم لا يظلمه ولا يسلِمُه، ومن كان في حاجة أخيه كان الله في حاجته، ومن فرج عن مسلم كربة من كرب الدنيا فرج الله عنه كربة من كرب يوم القيامة، ومن ستر على مسلم ستره الله في الدنيا والآخرة" قال رسول الله صلى الله عليه وسلم "المسلم أخو المسلم لا يظلمه ولا يسلِمُه، ومن كان في حاجة أخيه كان الله في حاجته، ومن فرج عن مسلم كربة من كرب الدنيا فرج الله عنه كربة من كرب يوم القيامة، ومن ستر على مسلم ستره الله في الدنيا والآخرة" </p>
+									<p>الشتاء في اليمن عصيب، ونظرًا للظروف المعيشية الصعبة والأجواء الشتوية الشديدة
+										تبرع بفائض ملابسك في نادي صلاله الرياضي وفريق حياه الخيري وبالتعاون مع الهيئة العمانية للاعمال الخيرية وجمعية فينا خير اليمنية</p>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-5 d-flex align-items-stretch">
+								<div class="info-wrap bg-primary w-100 p-md-5 p-4">
+									<!-- <h3>فائض ملابسك = قيمة جديدة</h3>
+									<p class="mb-4">احصل على مكأفاة مالية مقابل ملابسك المستعملة بالإضافة لكوبون خصم لأكبر الشركات داخل الإمارات</p> -->
+									<div class="dbox w-100 d-flex align-items-start">
+										<div class="icon d-flex align-items-center justify-content-center">
+											<span class="fa fa-map-marker"></span>
+										</div>
+										<div class="text pr-3">
+										<p><span>مواقع التجميع في : </span>
+											<ul>
+												<il>مقر نادي صلالة </il>
+												<li>جامع باغيث بعوقد الغربية</li>
+											</ul>
+										</p>
+									</div>
+								</div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-calendar"></span>
+				        		</div>
+				        		<div class="text pr-3">
+					            <p>تنطلق الحملة من يوم الأحد الموافق ٢٠٢٣/٢/٥م وتستمر إلى ٢٠٢٣/٢/٢٠م.</p>
+					          </div>
+				          </div>
+				        	<div class="dbox w-100 d-flex align-items-center">
+				        		<div class="icon d-flex align-items-center justify-content-center">
+				        			<span class="fa fa-car"></span>
+				        		</div>
+				        		<div class="text pr-3">
+					            <p>نستقبل كل أنواع الملابس والاحذية والشنط وسوف يتم استبدال قيمتها بملابس شتوية جديدة من شركة كسوة.</p>
+					          </div>
+				          </div>
+						  <div class="dbox w-100 d-flex align-items-center">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="fa fa-warning"></span>
+							</div>
+							<div class="text pr-3">
+							<p>سيتم الإعلان عن مواقع تجميع أخرى في ولايات طاقة ومرباط وثمريت وشليم وسدح.</p>
+						  </div>
+					  </div>
+				        	
+			          </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"></script>
+	<script src="assets/js/create_task.js"></script>
+
+	</body>
+</html>
+
