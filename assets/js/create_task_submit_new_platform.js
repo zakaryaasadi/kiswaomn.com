@@ -1,0 +1,109 @@
+const a2e = s => s.replace(/[٠-٩]/g, d => '٠١٢٣٤٥٦٧٨٩'.indexOf(d));
+
+$(document).ready(function(){
+    $("#send").click(function(){
+  
+      let name = $("#name").val();
+      let phone = $("#phone").val();
+      let address = $("#address").val();
+      
+  
+      if(name === ""){
+        $("#name_empty").css("display","block");
+        return;
+      }else{
+        $("#name_empty").css("display","none");
+      }
+  
+      if(phone === ""){
+        $("#phone_empty").css("display","block");
+        return;
+      }else{
+        $("#phone_empty").css("display","none");
+      }
+  
+      if(address === ""){
+        $("#address_empty").css("display","block");
+        return;
+      }else{
+        $("#address_empty").css("display","none");
+      }
+  
+  
+      let phoneNo = Number(a2e(phone));
+      if(phoneNo < 10000000 || phoneNo > 99999999 || isNaN(phoneNo)){
+        $("#phone_incorrect").css("display","block");
+        return;
+      }else{
+        $("#phone_incorrect").css("display","none");
+      }
+  
+  
+  
+  
+      $("#create-order .loading").css("display","block");
+  
+      $("#create-order .sent-message").css("display","none");
+      $("#create-order .dup-message").css("display","none");
+      $("#create-order .error-message").css("display","none");
+  
+      var country = "سلطنة عمان";
+      if( $("#send").hasClass("en")){
+        country = "Oman";
+      }
+  
+      $.post("https://kiswame.com/api/v1/third-party",
+      {
+        name: name,
+        phone: "+968" + phoneNo,
+        title: country + ", " + address,
+        association_id: "190",
+        type: "1",
+        platform: "Website",
+        country_id: "5"
+      },
+    function(d, status){
+      $("#create-order .loading").css("display","none");
+  
+      try{
+        if(status == "success"){
+    
+          if(d.status_code == 200){
+            $("#create-order .sent-message").css("display","block");
+            redirect();
+          }else if(d.status_code == 201){
+            $("#create-order .dup-message").css("display","block");
+          }else{
+            $("#create-order .error-message").css("display","block");
+          }
+    
+        }else{
+          $("#create-order .error-message").css("display","block");
+        }
+      }catch(e){
+        $("#create-order .error-message").css("display","block");
+      }
+    });
+  
+    return;
+  
+    });
+  
+  
+    $("#send-message").click(function(){
+      $(".send-message .sent-message").css("display","block");
+    });
+
+    function redirect(){
+      setTimeout(() => {
+        if( $("#send").hasClass("en")){
+          location.replace("../thank_you.html");
+        }else{
+          location.replace("thank_you.html");
+        }
+      }, 3000);
+    }
+  
+  });
+  
+  
